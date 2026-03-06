@@ -45,6 +45,20 @@ def ln(x, termos=50):
 
     return resultado
 
+def cosseno(medida = 1, escreverNum = True):
+
+    n = 0 # Número de iterações, define a precisão da saída.
+    resultado = 0
+    while n < 50:
+        resultado += ((-1)** n) * ((medida)**(2 * n)) / fatorial(2 * n) # Mágica Maligna     >:)
+        n +=1
+    if (escreverNum == True):
+        print(f"Cosseno de {medida}, é igual a {resultado}")
+        return resultado
+    else:
+        return resultado
+    
+    #cosseno(2) # Aqui entra o valor EM RADIANOS
 
 def Euler():
     e = 0 #Define a variavel
