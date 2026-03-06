@@ -31,6 +31,21 @@ def seno(x, k=10):  #Inicia uma função definindo quantidade de termos para cal
         soma += termo
     return soma
 
+def ln(x, termos=50):
+    if x <= 0:
+        return "Logaritmo indefinido"
+
+    y = x - 1  # porque usamos ln(1 + y)
+
+    resultado = 0
+
+    for n in range(1, termos + 1):
+        termo = ((-1)**(n+1)) * (y**n) / n
+        resultado += termo
+
+    return resultado
+
+
 def Euler():
     e = 0 #Define a variavel
     for n in range(1000): #O máximo que podemos utilizar na computação será 1000, pois acima disto o processamento será lento e ineficiente
